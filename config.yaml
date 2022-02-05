@@ -17,9 +17,9 @@ menu:
     - name: About
       url: /about/
     - name: GitHub
-      url: https://github.com/trwidmann
+      url: https://github.com/rstudio/blogdown
     - name: Twitter
-      url: https://twitter.com/traviswidmann
+      url: https://twitter.com/rstudio
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
@@ -34,7 +34,7 @@ params:
   logo:
     alt: Logo
     height: 50
-    url: logo.png
+    url: eyeball_logo.jpg
     width: 50
 markup:
   defaultMarkdownHandler: goldmark
