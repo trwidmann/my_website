@@ -7,7 +7,6 @@ I'm Travis Widmann, a data analyst with research experience in exercise science 
 
 ## Education
 
-*This 
-*That
-
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+* **Columbia University**, M.A. in Biobehavioral Sciences
+* **NYU**, Certification (with Distinction) in Computer Science
+* **Bard College**, B.A. in Studio Arts
