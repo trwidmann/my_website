@@ -1,80 +1,219 @@
 ---
-title: BMI and the Obesity Paradox
-author: ''
-date: '2022-01-30'
-slug: bmi-and-the-obesity-paradox
-categories: []
-tags: []
+title: "BMI and the Obesity Paradox"
+author: Travis Widmann
+output: html_document
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p><span class="math inline">\(~\)</span></p>
-<div id="background" class="section level2">
-<h2>Background</h2>
-<p>Obesity is considered a dangerous health risk, and the rates are increasing worldwide. Both the CDC and the wHO consider obesity an epidemic, a “major contributor to the global burden of chronic disease and disability.”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> BMI is the most common measure of obesity, and is the general standard by which overweight and obesity are classified. It’s important to acknowledge, though, that BMI is a proxy for the thing that ostensibly concerns us: adiposity, i.e., body fat.</p>
-<p>BMI is a source of contention in its own right; many researchers, practitioners, and concerned parties worry that is misclassifies many individuals, and worse, that the cut-offs are rather arbitrary. Defenders of BMI argue that it is a screening tool more than a diagnosis, a low resolution filter of sorts after which more precise follow-ups can confirm or disregard the presence of excess adiposity and conseqeuntial health risk.</p>
-<p>The controversy does not end there. Despite the consistent association of adiposity and a variety of health risks, many researchers have observed <em>improved</em> survival among ill or elderly cohorts with BMI statuses above the range traditionally deemed healthy, meaning those considered overweight and/or obese. The paradox arises from the apparent evidence of worse health status and yet improved mortality outcomes among populations with greater fat tissue.</p>
-<p>A number of questions arise. Are some of these associations simply wrong, the product of mistaken analyses and confounding? Are BMI categories misspecified? Is body fat not the health problem we thought it was? Is there even a paradox at all?</p>
-<p>Some argue that the worse health status we see with greater adiposity is the result of other factors, and fat tissue has little to no bearing on overall health status on its own. It’s unscientific to continue to assume that so-called overweight status reduces health and mortality if the evidence says otherwise. Others point to variables such as smoking status and occult (hidden) disease as confounders when it comes to the mortality association. After all, smoking and disease states are associated with lower BMI and greater mortality; not accounting for these conditions skews the resulting observations, making it appear that higher BMI is protective when in actuality other conditions mask the true relationship.</p>
-<p>Another contention, and the one we will explore here, has to do with the low resolution of BMI as a measurement. As stated earlier, BMI is a proxy tool. Even though obesity categories are often defined in terms of BMI, it is really the case the BMI is trying to ascertain the presence of excess body fat, and as such the score itself should not be considered the definitive feature of obesity status. Being an index comprised only of height and weight, it cannot distinguish between types of tissue.</p>
-<p>This is an important consideration. We know that sarcopenia–the progressive and usually age-related loss of muscle mass–is a health risk associated with greater mortality. Furthermore, the aforementioned presence of disease states often results in substantial losses of fat <em>and</em> lean mass. Increasing sedentary times also contributes to lower lean mass in all ages. All of these factors can contribute to a status known as Normal Weight Obesity (NWO), defined as the condition of having normal BMI but high adiposity. Indeed, we might like to know to what extent the presence of lean mass, or lack thereof, contributes to or even explains the obesity paradox.</p>
+<div id="background" class="section level3">
+<h3>Background</h3>
+<p>Both the CDC and the wHO consider obesity an epidemic, a “major contributor to the global burden of chronic disease and disability.”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> BMI is the most common measure of obesity, and is the general standard by which overweight and obesity are classified. It’s important to acknowledge, though, that BMI is a proxy for the thing that ostensibly concerns us: adiposity, i.e., body fat. The CDC make note on their website that BMI is a screening tool, not a diagnostic, and thus requires follow-up testing for confirmation and further consideration of individual health status and risks.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>BMI is a source of contention in its own right; many researchers, practitioners, and concerned parties worry that it misclassifies many individuals, and worse, that the cut-offs are rather arbitrary. Defenders of BMI point to its utility as an initial screening tool, and a pretty successful one at that.</p>
+<p>The controversy does not end there. Despite the consistent association of adiposity and a variety of health risks, many researchers have observed <em>improved</em> survival among ill or elderly cohorts with BMI statuses above the range traditionally deemed healthy, meaning those considered overweight and/or obese. This is pretty surprising to a lot of people: greater adiposity is associated with increased risk of a variety of disease states, and yet overweight status seems to be protective against death, and even some level of obesity does not confer any disadvantage compared to normal weight people.</p>
+<p><a href="https://jamanetwork.com/journals/jama/fullarticle/1555137">This 2013 meta-analysis</a> by Flegal et al. is perhaps the most famous (or infamous) paper to show these counterintuitive findings on a large scale, though the term had been around for at least decade before it was published. A <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(16)30175-1/fulltext">2016 meta-analysis</a> by the Global BMI Mortality Collaboration can be considered something of a response to Flegal’s paper. It contains more studies from more countries with more participant data, and uses a some different methods to limit reverse causality. The appropriateness of these methods is naturally the source of much debate all on its own, but a discussion of this is beyond the scope of our current investigation here.</p>
+<p>There are many many more papers I can cite that explore, support, criticize, or discuss the obesity paradox. The particular thing, however, that I’d like to draw attention to is that they almost all use BMI as a measure of obesity status. Indeed, BMI is the primary measure by which our epidemiological obesity research is conducted, and consequently by which our conclusions are made. Despite the known lack of resolution at the individual level, BMI seems to be taken for granted as an appropriate and informative tool in these large-scale analyses. Subsequent debates about the role of body fat in health and mortality rely on conclusions which assume that such results accurately reflect body compostion in the first place.</p>
+<p>But do they? After all, body fat is only one source of weight—we also have bones, organs, and muscle tissue. It’s not likely that bone and organ mass would lead to large differences in body mass at any given height when dealing with large populations, but muscle tissue sure can. In fact, muscle tissue is already a known determinant of health status, particularly in the elderly. Sarcopenia is a potent cause of concern in advancing age. However, given increasingly sedentary lifestyles, muscle tissue status might a growing concern at younger ages. At the very least, it seems worth investigating, especially since body fat has commanded the spotlight so exclusively for so long.</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="the-question" class="section level2">
-<h2>The Question</h2>
+<div id="the-question" class="section level3">
+<h3>The Question</h3>
 <p>The simple question that a lot of researchers spend a lot of time on trying to resolve is, what is the cause of the apparent obesity paradox? Alternatively, is there a paradox in need of resolving?</p>
 <p>We won’t be able to definitively answer either question in one blog post, but we can definitely gain some insight into possible reasons for why these discrepancies exist. I think it makes sense to check our tools when something doesn’t seem quite right, so it’ll help us to get a better sense of how BMI “behaves.”</p>
-<p>I’ve also had a pet theory for a while that the status of lean tissue, and muscle mass in particular, might help explain the discrepancies, hence the earlier mention of sarcopenia. The bulk of the literature in this area concerns BMI and adipose tissue; in comparison, not much mention is made of muscle tissue. So one component of our investigation will concern the particularities of muscle tissue status within the official BMI categories.</p>
+<p>I’ve also had a pet theory for a while that the status of lean tissue, and muscle mass in particular, might help explain common inconsistencies. The bulk of the literature in this area concerns BMI and body fat; in comparison, not much mention is made of muscle mass. So one component of our investigation will concern the particularities of muscle tissue status within the official BMI categories.</p>
 <p>The ultimate aim of this analysis will be to more carefully assess the construct validity of BMI itself. Construct validity refers to the ability of the particular form of measurement to accurately represent the actual construct of interest. For example, does IQ adequately capture the not directly observable abstraction we call intelligence? Thankfully, our “construct” here is body fat, which is quite observable, so we don’t have to worry so much about the characteristics of theory here. All we need is a more direct measure of body fat, which is not all that hard to find…</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="sourcing-the-data" class="section level2">
-<h2>Sourcing the Data</h2>
-<p>We’ll use data from the National Health and Nutrition Examination Survey (NHANES)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, a yearly survey of population health status and disease prevalence from a representative sample of 5000 participants. Our data set will cover the year 1999-2006, because these are the years for which dual X-ray absorbtriometry (DXA) scans were included in the health examinations. DXA scans are considered a gold standard measurement tool for body composition. Other years use other tools, such as bioelectrical impedance, but I want to keep the data as consistent and reliable as possible.</p>
-<p>NHANES includes a wealth of data including hundreds variables across numerous examinations and questionnaires. We’re interested of course in body composition and certain demographic characteristics. Another benefit of NHANES data is that the CDC has linked these data sets to participant mortality data up to the year 2015<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> (with subsequent years incoming), so we can choose to investigate associations with mortality if we want to perform a bit of inference in the future. All in all it’s an extremely rich source of population data.</p>
+<div id="sourcing-the-data" class="section level3">
+<h3>Sourcing the Data</h3>
+<p>We’ll use data from the National Health and Nutrition Examination Survey (NHANES)<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, a yearly survey of population health status and disease prevalence from a representative sample of 5000 participants. NHANES is a flagship program of the NAtional Center for Health Statistics (NCHS), which is part of the CDC.</p>
+<p>Our data set will cover the year 1999-2006, because these are the years for which dual X-ray absorbtriometry (DXA) scans were included in the health examinations. DXA scans are considered a gold standard measurement tool for body composition. Other years use other tools, such as bioelectrical impedance, but I want to keep the data as consistent and reliable as possible.</p>
+<p>NHANES includes a wealth of data including hundreds variables across numerous examinations and questionnaires. We’re interested of course in body composition and certain demographic characteristics. Another benefit of NHANES data is that the CDC has linked these data sets to participant mortality data up to the year 2015<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> (with subsequent years incoming), so we can choose to investigate associations with mortality if we want to perform a bit of inference in the future. All in all it’s an extremely rich source of population data.</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="data-wrangling" class="section level1">
-<h1>Data Wrangling</h1>
+<div id="the-data" class="section level1">
+<h1>The Data</h1>
+<p><span class="math inline">\(~\)</span></p>
 <div id="libraries" class="section level3">
 <h3>Libraries</h3>
 <p>These are the packages we need to run all of our code.</p>
+<pre class="r"><code>library(tidyverse)
+library(foreign)
+library(parsnip)</code></pre>
+<p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="importing-the-data" class="section level2">
-<h2>Importing the Data</h2>
-<p>We start by taking advantage of some R functionality to automate some of the importation process. As long as all of the files are available and we are working in the correct directory, the <code>list.files()</code> function will ease the typing overhead.</p>
-<p>We can write ourselves a couple custom functions to import our files into useable data. The mortality documentation provides instructions for importing this particular data set, which is in a different format than the NHANES material.</p>
-<p>Now we can iterate through our files to import them. It’ll be helpful to bunch the NHANES data together into a single list, which we can then modify with some more <code>lapply()</code> applications. Then we reassign our variable names. The mortality data needs to be imported seperately due to the different format and file type.</p>
+<div id="importing-the-data" class="section level3">
+<h3>Importing the Data</h3>
+<p>I downloaded the files for each year that NHANES inlcuded DXA scans and for which there is linked mortality data. This included demographics, body measures, and dual-energy x-ray absorptiometry data from survey years 1999-2000, 2001-2002, 2003-2004, and 2005-2006. The data files are in two year groups because, though surveys are conducted yearly, data are released in two year batches for the purpose of larger sample sizes with more precise inferences.</p>
+<p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="cleaning-the-data" class="section level2">
-<h2>Cleaning the Data</h2>
+<div id="cleaning-the-data" class="section level3">
+<h3>Cleaning the Data</h3>
 <p>The bulk of what we need to do is trim and combine the data sets, which also requires some alterations so that the joins work. We’ll also rename the variables to make them more understandable.</p>
+<pre class="r"><code>nrow(dat)</code></pre>
 <pre><code>## [1] 29026</code></pre>
 <p>There are just over 29,000 observations, but missingness has not yet been accounted for.</p>
-<pre><code>##       id    l_arm    r_arm    l_leg    r_leg perc_fat   weight   height 
-##        0     1767     1767     1767     1767     1767      568      455 
-##      bmi   gender      age    age_m mortstat 
-##      709        0        0      468     8671</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">id</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">l_arm</td>
+<td align="right">1767</td>
+</tr>
+<tr class="odd">
+<td align="left">r_arm</td>
+<td align="right">1767</td>
+</tr>
+<tr class="even">
+<td align="left">l_leg</td>
+<td align="right">1767</td>
+</tr>
+<tr class="odd">
+<td align="left">r_leg</td>
+<td align="right">1767</td>
+</tr>
+<tr class="even">
+<td align="left">perc_fat</td>
+<td align="right">1767</td>
+</tr>
+<tr class="odd">
+<td align="left">weight</td>
+<td align="right">568</td>
+</tr>
+<tr class="even">
+<td align="left">height</td>
+<td align="right">455</td>
+</tr>
+<tr class="odd">
+<td align="left">bmi</td>
+<td align="right">709</td>
+</tr>
+<tr class="even">
+<td align="left">gender</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">age</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">age_m</td>
+<td align="right">468</td>
+</tr>
+<tr class="odd">
+<td align="left">mortstat</td>
+<td align="right">8671</td>
+</tr>
+</tbody>
+</table>
 <p>Several columns contain missing values, but by filtering three of the most important variables we can drastically reduce missingness in the data set. I’ve decided to allow for some missing age-in-months observations since there are relatively few missing in total. The other variables are too important to allow missing values for.</p>
-<pre><code>##       id    l_arm    r_arm    l_leg    r_leg perc_fat   weight   height 
-##        0        0        0        0        0        0        0        0 
-##      bmi   gender      age    age_m mortstat 
-##        0        0        0      390        0</code></pre>
+<pre class="r"><code>knitr::kable(
+  colSums(is.na(dat))
+)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">id</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">l_arm</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">r_arm</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">l_leg</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">r_leg</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">perc_fat</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">weight</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">height</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">bmi</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">gender</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">age</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">age_m</td>
+<td align="right">390</td>
+</tr>
+<tr class="odd">
+<td align="left">mortstat</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>nrow(dat)</code></pre>
 <pre><code>## [1] 18536</code></pre>
 <p>About 10,500 participants have been lost after removing NAs, mostly due to missing mortality data, but the data set is still quite large. Unfortunately, the missing mortality data cannot be imputed safely because we cannot make any safe assumptions about the various reasons why such data might be missing in the first place.</p>
+<p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="adding-new-variables" class="section level2">
-<h2>Adding New Variables</h2>
+<div id="adding-new-variables" class="section level3">
+<h3>Adding New Variables</h3>
 <p>We’ll add the official BMI designation for each observation.</p>
-<p>We’ll also add some variables indicating appendicular skeletal muscle (ASM) and appendicular skeletal muscle index (ASMI). With these new variables made we can also assign ASMI categories similarly to the BMI categories, though we only have two. The International Working Group on Sarcopenia determined diagnostic sarcopenia thresholds as &lt;= 7.23 ASMI for men and &lt;= 5.67 ASMI for women, so these are the values we’ll use. CITATION</p>
+<pre class="r"><code># Create BMI categories and add new variable
+bmi_levels = c(&quot;Underweight&quot;, &quot;Healthy&quot;, &quot;Overweight&quot;, &quot;Obese&quot;)
+
+dat &lt;- dat %&gt;%
+  mutate(bmi_status = case_when(bmi &gt;= 30 ~ &quot;Obese&quot;,
+                         bmi &lt; 30 &amp; bmi &gt;= 25 ~ &quot;Overweight&quot;,
+                         bmi &lt; 25 &amp; bmi &gt;= 18.5 ~ &quot;Healthy&quot;,
+                         bmi &lt; 18.5 ~ &quot;Underweight&quot;)) %&gt;%
+  mutate(bmi_status = factor(bmi_status, levels = bmi_levels))</code></pre>
+<p>We’ll also add some variables indicating appendicular skeletal muscle (ASM) and appendicular skeletal muscle index (ASMI). With these new variables made we can also assign ASMI categories similarly to the BMI categories, though we only have two. The International Working Group on Sarcopenia determined diagnostic sarcopenia thresholds as &lt;= 7.23 ASMI for men and &lt;= 5.67 ASMI for women, so these are the values we’ll use.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<pre class="r"><code># Create ASM &amp; ASMI &amp; sarcopenia variables
+dat &lt;- dat %&gt;%
+  mutate(asm = l_arm + r_arm + l_leg + r_leg,
+         asmi = (asm * 0.001) / (height * 0.01)^2,
+         sarc = ifelse(gender == &quot;male&quot; &amp; asmi &lt; 7.23,
+                       TRUE,
+                       ifelse(gender == &quot;female&quot; &amp; asmi &lt; 5.67,
+                              TRUE, FALSE)))
+
+sum(dat$sarc, na.rm = TRUE)</code></pre>
 <pre><code>## [1] 3290</code></pre>
-<p>About 3,300 participants in the data set can be considered sarcopenic according the cut-offs.</p>
-</div>
-<div id="final-cleaning" class="section level2">
-<h2>Final Cleaning</h2>
-<p>Having all the varialbes required for analysis, what is no longer needed can be removed. We can also change the mortality variable to a factor, which will make the data visualization easier later on.</p>
+<p>About 3,300 participants in the data set can be considered sarcopenic according to the cut-offs.</p>
+<p>Here is the final data set:</p>
 <pre><code>## # A tibble: 18,536 x 11
 ##       id perc_fat   bmi gender   age age_m mortcode bmi_status  asmi sarc 
 ##    &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;int&gt; &lt;fct&gt;      &lt;dbl&gt; &lt;lgl&gt;
@@ -89,16 +228,18 @@ tags: []
 ##  9  9980     50.2  38.6 female    85    NA        1 Obese       8.78 FALSE
 ## 10  9984     46.5  36.1 female    46   559        0 Obese       7.53 FALSE
 ## # ... with 18,526 more rows, and 1 more variable: mortstat &lt;fct&gt;</code></pre>
+<p><span class="math inline">\(~\)</span></p>
 </div>
 </div>
 <div id="exploratory-analysis" class="section level1">
 <h1>Exploratory Analysis</h1>
-<div id="univariate-analysis-and-participant-characteristics" class="section level2">
-<h2>Univariate Analysis and Participant Characteristics</h2>
+<p><span class="math inline">\(~\)</span></p>
+<div id="univariate-analysis-and-participant-characteristics" class="section level3">
+<h3>Univariate Analysis and Participant Characteristics</h3>
 <p>First we can look at the distribution of BMI in categorical and continuous terms.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>Underweight prevalence is quite low compared to the other categories, which otherwise have similar prevalence.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Underweight prevalence is quite low compared to the other categories, which otherwise have similar prevalence.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>The continuous BMI distributions appears to be normal, with right skewness.</p>
 <pre><code>## # A tibble: 2 x 5
 ##   gender mean_bmi sd_bmi perc_sarc     n
@@ -106,97 +247,85 @@ tags: []
 ## 1 female     28.6   7.10     0.200  9162
 ## 2 male       27.7   5.60     0.156  9374</code></pre>
 <p>The data set is fairly evenly populated by gender. Mean BMI is quite similar between male and female as well, with a bit more variance among females. Women have a slightly higher rate of sarcopenia.</p>
-</div>
-<div id="bivariate-analysis" class="section level2">
-<h2>Bivariate Analysis</h2>
-<p>First we should compare mortality prevalence stratified by different measures of body composition, since this is often the concern underlying the obesity paradox.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>We can also check differences in BMI distribution between genders.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
-<p>Mortality occurence does not track according to BMI status in any discernible way, but when stratifying by appendicular muscle status it’s at least twice the rate for those with sarcopenia.</p>
-<p>Now let’s take a look at the prevalence of sarcopenia among different BMI categories.</p>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="bivariate-analysis" class="section level3">
+<h3>Bivariate Analysis</h3>
+<p>First we should compare total mortality prevalence stratified by different measures of body composition, since this is often the concern underlying the obesity paradox.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Mortality occurence does not track according to BMI status in any discernible way, but when stratifying by appendicular muscle status it’s at least twice the rate for those with sarcopenia. We have some initial indication that we might be on to something here.</p>
+<p>Now let’s take a look at the prevalence of sarcopenia among different BMI categories.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>Not only is the underweight BMI category almost entirely populated by participants with sarcopenia, a substantial proportion of the healthy category is sarcopenic as well–nearly half. It seems that being given a “healthy” BMI designation has the potential to be woefully misleading. This might go some way in explaining why many investigators observe the obesity paradox in different data sets. Sarcopenia increases the risk of mortality, so if lower BMI statuses catch dramatically more sarcopenic individuals, it starts to make sense why higher BMIs sometimes appear to be protective against mortality compared to the “healthy” category. But does this mean that excess body fat is not the health risk it was thought to be, or does it mean that low muscle mass exerts a confounding effect on BMI outcomes?</p>
 <p>At this point, we should explore how the different measures of body composition relate to each other, starting with BMI and body fat percentage.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<p>The two are pretty well associated, which is good news insofar as BMI does track body fat percentage somewhat successfully.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
-<p>ASMI is a poor proxy for body fat. There does appear to be some clustering, though the density of points makes it hard to see clearly. The most obvious explanation for this would be gender, so let’s try stratifying by that variable and see if the differences match the apparent clusters above.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<p>Looks like the shoe fits, as it were. We can see why running a single regression on the entirety of the data set can be misleading. Men and women tend to carry different levels of body fat and muscle, so lumping both genders together won’t provide a terribly accurate representation for analysis.</p>
-<p>Let’s continue exploring various associations, starting with muscle mass and BMI. We’ll keep stratifying by gender.</p>
+<p>The two are pretty well associated, which is good news insofar as BMI does track body fat percentage somewhat successfully.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>ASMI is a poor proxy for body fat. There does appear to be some clustering, though the density of points makes it hard to see clearly. The most obvious explanation for this would be gender, so let’s try stratifying by that and see if the differences match the apparent clusters above.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>Looks like the shoe fits, as it were. We can see why running a single regression on the entirety of the data set can be misleading. Men and women tend to carry different levels of body fat and muscle, so lumping both genders together won’t provide a terribly accurate representation for analysis.</p>
+</div>
+<div id="multivariate-analysis" class="section level3">
+<h3>Multivariate Analysis</h3>
+<p>Let’s continue exploring various associations, starting with muscle mass and BMI. We’ll keep stratifying by gender.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <p>There’s a strong association here. More muscle generally corresponds to a higher BMI, which is not suprising since more muscle means more weight.</p>
 <p>It’s important to check for any association of muscle tissue with age. Generally sarcopenia is considered an age-related disorder and a particular burdeon on the elderly. Depending on how ASMI and age are associated in the data set, our final interpretations might change.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
-<p>Interestingly, age and ASMI show little to no relation in the current data set, meaning that age does not appear to be a confounder for what we find with further analysis.</p>
-</div>
-<div id="multivariate-analysis" class="section level2">
-<h2>Multivariate Analysis</h2>
-<p>We saw that, taking all the data together, ASMI was not associated with body fat percentage. Now we’ll stratify by BMI status and see if anything changes.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
-<p>These plots are simply divisions of the body fat percentage by ASMI plot above, but splitting them better shows the range of BMI contained in each group. What stands out here is the broad range of body fat percentages included in the healthy group, from 10% to 50%, extending over almost the entire range occurring in the data set. In fact, the same can be said of the overweight group, and even to some degree of the obese group. BMI status tracks adiposity with remarkable imprecision.</p>
-<p>Another point of note is that body fat decreases as ASMI increases. This relationship is forced by our analysis here: each plot in the grid indicates a BMI category, so as ASMI goes up, body fat <em>must</em> at some point go down, otherwise the observation would switch into the next BMI grouping. This is why I think the range of BF% is the more interesting characteristic. After all, nothing about BMI says that such a range should be the case; rather, we’d hope for a tight spread.</p>
-<p>To get a better idea of the range of body fat percentage within each BMI category, we can stratify by gender and compare BMI and body fat directly.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>Interestingly, age and ASMI show little to no relation in the current data set, meaning that age does not appear to be a confounder for what we find with further analysis.</p>
+<p><span class="math inline">\(~\)</span></p>
+<p>We saw that, taking all the data together, ASMI was not associated with body fat percentage. Now we’ll stratify by BMI status and see if anything changes.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>These plots are simply divisions of the body fat percentage by ASMI plot above, but splitting them better shows the range of body fat and ASMI contained in each BMI group. What stands out here is the broad range of body fat percentages included in the healthy group, from 10% to 50%, extending over almost the entire range occurring in the data set. In fact, the same can be said of the overweight group, and even to some degree of the obese group. BMI status tracks adiposity with remarkable imprecision.</p>
+<p>Another point of note is that body fat decreases as ASMI increases. This relationship is forced by our analysis here: each plot in the grid indicates a BMI category, so as ASMI goes up, body fat <em>must</em> at some point go down, otherwise the observation would switch into the next BMI grouping. This is an example of collider stratification bias; controlling for BMI status introduces an artifical relationship between ASMI and body fat, so we don’t want to fool ourselves here. I think the broad ranges of BF% is the more interesting characteristic. After all, nothing about BMI says that such a range should be the case. Rather, we’d hope for a tighter spread if BMI is supposed to indicate adiposity.</p>
+<p>To get a better idea of the range of body fat percentage within each BMI category, we can stratify by gender and compare BMI and body fat directly.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p>Again, there’s a remarkable spread of body fat percentage in each BMI category. Body fat increases more steeply with BMI for females than for males, but even so, the range of BF% for females is roughly 20 to 45 in the healthy category, and for males it’s roughly 12 to 35. In the overweight category the range is about 30-50% for female participants and 15-40% for male. That’s a minimum 20 percentage point spread (not counting the underweight category, which is relatively rare to begin with).</p>
 <p>Combine this information with what we observed earlier–particularly, that nearly half of the participants with a healthy BMI score qualified as sarcopenic. It only makes sense then that body fat varies so widely at any given BMI; if so many of the participants in the healthy range are sarcopenic, then their weight has to come from <em>somewhere</em>, and it’s certainly not going to come from extra bone or organ tissue. Nor is it accounted for by height, since that is already included in BMI.</p>
 <p>As a sanity check, let’s split our initial faceted plots by gender.</p>
-<div id="male" class="section level3">
-<h3>Male</h3>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
-</div>
-<div id="female" class="section level3">
-<h3>Female</h3>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
-<p>Nothing really has changed beyond the particular boundaries of the ranges. No matter what way we slice it, BMI is a rather terrible measure of body fat. But it would make more sense to combine these different plots into one, since we can do so without losing coherence or information.</p>
-<pre class="r"><code>dat %&gt;% ggplot(aes(asmi, perc_fat, color = gender)) +
-  geom_point(alpha = 0.2) +
-  geom_smooth(aes(group = gender), method = &quot;lm&quot;, color = &quot;black&quot;) +
-  labs(x = &quot;ASMI&quot;, y = &quot;BF%&quot;) +
-  theme_bw() +
-  facet_wrap(~bmi_status)</code></pre>
+<p><span class="math inline">\(~\)</span></p>
+<div id="male" class="section level4">
+<h4>Male</h4>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
-<p>Only the obese category presents a non-negative correlation between ASMI and body fat, perhaps because this category is not bounded on one side.</p>
-<p>For the final graphics, we’ll stratify by sarcopenia status and gender, then by sarcopenia status alone, plotting BMI against body fat percentage for both.</p>
+</div>
+<div id="female" class="section level4">
+<h4>Female</h4>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Nothing really has changed beyond the particular boundaries of the ranges. No matter what way we slice it, BMI is a rather terrible measure of body fat.</p>
+<p><span class="math inline">\(~\)</span></p>
+<p>Let’s look at a couple more plots to get another sense of how muscle tissue status behaves in relation to BMI as a continuous variable and BF%. We’ll stratify by sarcopenia status and gender, then by sarcopenia status alone, plotting BMI against body fat percentage for both.</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
-<p>At any level of body fat percentage, instances of clinically low muscle mass are gathered on the bottom end of the BMI range. In other words, at any BMI, sarcopenia tends to occur with higher percentages of body fat.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>This really is the heart of the matter. At any level of body fat percentage, instances of clinically low muscle mass are gathered on the bottom end of the BMI range. And this is only a binary categorization of muscle mass. Looking again at some of the previous plots, it’s clear that ASMI ranges shift downward when moving lower on the BMI ordinal scale. It’s safe to say that low, but not clinically low, muscle mass also gathers toward the lower end of BMI within this population.</p>
+<p>Now let’s reconsider the obesity paradox. Above-healthy BMI scores sometime correspond to equal or better mortality outcomes in ways that are counterintuitive to most practitioners and researchers considering the simultaneous association with greater prevalence of disease. But consider what we’ve seen here: an otherwise hidden determinant of health and mortality preferentially occurs at lower BMIs. In fact, it occurs in the healthy BMI category most of all.</p>
+<p>The last point is important because the healthy BMI range is generally used as the reference category when assessing differences in mortality. Keeping in mind the observation that this category has the highest proportion of participants with low muscle mass—and I see no reason why this would not be the case in other data sets—the “paradox” starts to look more like a natural consequence of the distribution of body compostion within the BMI scale.</p>
+<p><span class="math inline">\(~\)</span></p>
 </div>
 </div>
 </div>
 <div id="modeling" class="section level1">
 <h1>Modeling</h1>
-<p>I’m going to start with a simple logistic model here, regressing mortality outcomes on body fat, ASMI, and gender.</p>
-<pre><code>## # A tibble: 5 x 5
-##   term        estimate std.error statistic   p.value
-##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-## 1 (Intercept) -5.66      0.204      -27.7  2.35e-169
-## 2 perc_fat    -0.00695   0.00434     -1.60 1.10e-  1
-## 3 asmi        -0.102     0.0204      -5.01 5.34e-  7
-## 4 age          0.0878    0.00172     51.2  0        
-## 5 gendermale   0.601     0.0851       7.06 1.64e- 12</code></pre>
-<pre><code>## [1] 0.9931238</code></pre>
-<pre><code>## [1] 0.9025781</code></pre>
-<pre><code>## [1] 1.09177</code></pre>
-<pre><code>## [1] 1.823212</code></pre>
-<pre><code>## [1]  3.48129 18.88015</code></pre>
-</div>
-<div id="conclusion" class="section level1">
-<h1>Conclusion</h1>
+<p>I’ll update this section as I work on different models. One thing I’d like to do is go back to the original data and include more variables. Smoking status is an important one, since it can present as a confounder when modelling mortality from body composition, as smoking is associated with lower BMI but higher mortality. It might be worth including some other variables as well.</p>
+<p><span class="math inline">\(~\)</span></p>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
 <p>The current exploratory analysis cannot answer the question of what causes the obesity paradox, but it does provide some promising insight into potential explanations. At the very least, this analysis confirms the fact that BMI is a very low-resolution tool, and that without more precise instruments of measurement, any results concerning the association of health outcomes with obesity status warrant a surfeit of caution. The most immediate implication is that the presence of low muscle mass can mask excess fat accumulation, and if the scientific consensus about the dangers of obesity are correct, than much of that danger is being hidden in mistakenly “healthy” BMI categories.</p>
-<p>For the same reasons, further caution should be applied to any conclusions stemming from observation of the obesity paradox itself, and the term is likely to be misleading on multiple levels. Firstly, a more appropriate name might perhaps be the “BMI dilemma,” since excess adipose tissue accumulation, as obesity is understood to be, is not limited to those higher BMI categories. Secondly, if the superior survival of BMIs above the traditionally healthy range is the consequence of preserved skeletal muscle tissue, then there is no paradox at all.</p>
-<p>What’s most concerning, in my mind, is not so much that BMI is low resolution–that’s already well known. It’s that basically all of our population-level research into obesity and health outcomes uses BMI as the definitive measure from which all our conclusions and decisions are derived, because, in fact, BMI is how obesity is <em>defined</em>.</p>
-<p>What we’ve seen here should cast doubt on how we define obesity, and more worryingly, it calls into question any conclusions that researchers have made about obesity and health using this definition. In terms of construct validity, we’ve explored whether the test adequately measures our construct of interest. The test is BMI, the construct is body fat, and the answer is no, it does not.</p>
-<p>If BMI does not reliably measure adiposity, the next question is what does it measure? What do our findings mean if they do not mean particurly what we thought they mean?</p>
+<p>For the same reasons, further caution should be applied to any conclusions stemming from observation of the obesity paradox itself, and the term is likely to be misleading on multiple levels. Firstly, a more appropriate name might perhaps be the “BMI dilemma,” since excess adipose tissue accumulation, as obesity is understood to be, is not limited to those higher BMI categories. Secondly, if the superior survival of BMIs above the traditionally healthy range is the consequence of preserved skeletal muscle tissue, then there simply is no paradox.</p>
+<p>What’s most concerning is that a large majority of the population-level research into obesity and health outcomes relies on BMI to make conclusions about the role of body fat in population health. From what we’ve seen here, such conclusions are likely mistaken. The next question we’re left with is how mistaken. Furthermore, what we’ve seen here should cast doubt on how we define obesity in the first place. In terms of construct validity, BMI fails pretty miserably.</p>
 <p><span class="math inline">\(~\)</span></p>
 <p><em>End</em></p>
-<p><span class="math inline">\(~\)</span></p>
+</div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p>World Health Organization. (n.d.). <em>Obesity and Overweight</em>. who.int. <a href="https://www.who.int/dietphysicalactivity/media/en/gsfs_obesity.pdf" class="uri">https://www.who.int/dietphysicalactivity/media/en/gsfs_obesity.pdf</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Center for Disease Control and Prevention. (n.d.). <em>NHANES Questionnaires, Datasets, and Related Documents</em>. cdc.gov. <a href="https://wwwn.cdc.gov/nchs/nhanes/Default.aspx" class="uri">https://wwwn.cdc.gov/nchs/nhanes/Default.aspx</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Center for Disease Control and Prevention. (n.d.). <em>NCHS Data Linked to NDI Mortality Files</em>. cdc.gov. <a href="https://www.cdc.gov/nchs/data-linkage/mortality.htm" class="uri">https://www.cdc.gov/nchs/data-linkage/mortality.htm</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Centers for Disease Control and Prevention. (n.d.). <em>Defining Adult Overweight and Obesity</em>. cdc.gov. <a href="https://www.cdc.gov/obesity/adult/defining.html" class="uri">https://www.cdc.gov/obesity/adult/defining.html</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Center for Disease Control and Prevention. (n.d.). <em>NHANES Questionnaires, Datasets, and Related Documents</em>. cdc.gov. <a href="https://wwwn.cdc.gov/nchs/nhanes/Default.aspx" class="uri">https://wwwn.cdc.gov/nchs/nhanes/Default.aspx</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Center for Disease Control and Prevention. (n.d.). <em>NCHS Data Linked to NDI Mortality Files</em>. cdc.gov. <a href="https://www.cdc.gov/nchs/data-linkage/mortality.htm" class="uri">https://www.cdc.gov/nchs/data-linkage/mortality.htm</a><a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>International Working Group on Sarcopenia. (May 2011). <em>Sarcopenia: An Undiagnosed Condition in Older Adults. Current Consensus Definition: Prevalence, Etiology, and Consequences</em>. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3377163/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3377163/</a><a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
