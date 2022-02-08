@@ -1,7 +1,7 @@
 ---
 title: "BMI and the Obesity Paradox"
 author: Travis Widmann
-date: 2022-02-08
+date: 2021-01-30
 output: html_document
 ---
 
@@ -13,7 +13,7 @@ $~$
 
 ### Background
 
-Both the CDC and the wHO consider obesity an epidemic, a "major contributor to the global burden of chronic disease and disability."^[World Health Organization. (n.d.). *Obesity and Overweight*. who.int. https://www.who.int/dietphysicalactivity/media/en/gsfs_obesity.pdf] BMI is the most common measure of obesity, and is the general standard by which overweight and obesity are classified. It's important to acknowledge, though, that BMI is a proxy for the thing that ostensibly concerns us: adiposity, i.e., body fat. The CDC make note on their website that BMI is a screening tool, not a diagnostic, and thus requires follow-up testing for confirmation and further consideration of individual health status and risks.^[Centers for Disease Control and Prevention. (n.d.). *Defining Adult Overweight and Obesity*. cdc.gov. https://www.cdc.gov/obesity/adult/defining.html]
+Both the CDC and the WHO consider obesity an epidemic, a "major contributor to the global burden of chronic disease and disability."^[World Health Organization. (n.d.). *Obesity and Overweight*. who.int. https://www.who.int/dietphysicalactivity/media/en/gsfs_obesity.pdf] BMI is the most common measure of obesity, and is the general standard by which overweight and obesity are classified. It's important to acknowledge, though, that BMI is a proxy for the thing that ostensibly concerns us: adiposity, i.e., body fat. The CDC make note on their website that BMI is a screening tool, not a diagnostic, and thus requires follow-up testing for confirmation and further consideration of individual health status and risks.^[Centers for Disease Control and Prevention. (n.d.). *Defining Adult Overweight and Obesity*. cdc.gov. https://www.cdc.gov/obesity/adult/defining.html]
 
 BMI is a source of contention in its own right; many researchers, practitioners, and concerned parties worry that it misclassifies many individuals, and worse, that the cut-offs are rather arbitrary. Defenders of BMI point to its utility as an initial screening tool, and a pretty successful one at that.
 
