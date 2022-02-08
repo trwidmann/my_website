@@ -1,0 +1,7 @@
+---
+title: 'Projects'
+---
+
+# Analysis of BMI Construct Validity
+
+I performed an [analysis](https://traviswidmann.com/2021/01/30/bmi-and-the-obesity-paradox/) of publically available U.S. survey data exploring the accuracy of BMI as a measure of obesity, as well as associations with mortality. This project was inspired by the so-called "obesity paradox," which refers to the apparent association of excess body fat with higher disease risk, yet also with improved mortality outcomes in a number of cases. I considered the fact that epidemiological obesity research almost always uses BMI as a population measure of obesity, but BMI is also known to be a low-resolution proxy of body fat status at the individual level, so I was curious to see how well BMI managed to accord with more accurate body fat measurements. The results show that it does a pretty bad job, which is quite concerning considering so much causal inference concerning obesity and public health relies on BMI. This might also help explain the apparent paradox as a potential consequence of poor measurement tools and mistaken assumptions about what BMI captures in the first place. Code available in my [GitHub](https://github.com/trwidmann/BMI)
