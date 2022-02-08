@@ -485,7 +485,7 @@ $~$
 
 # Modeling
 
-I'll update this section as I work on different models. One thing I'd like to do is go back to the original data and include more variables. Smoking status is an important one, since it can present as a confounder when modelling mortality from body composition, as smoking is associated with lower BMI but higher mortality. It might be worth including some other variables as well.
+I'll update this section as I work on different models. One thing I'd like to do is go back to the original data and include more variables. Smoking status is an important one that can present as a confounder when modeling mortality from body composition, as smoking is associated with lower BMI but higher mortality. It might be worth including some other variables as well.
 
 ```{r}
 log_mod <- logistic_reg() %>% set_engine("glm")
